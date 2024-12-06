@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {
   motion,
   useTransform,
@@ -22,6 +22,11 @@ export const AnimatedTooltip = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // rotate the tooltip
   const rotate = useSpring(
       useTransform(x, [-100, 100], [-45, 45]),
