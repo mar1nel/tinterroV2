@@ -39,42 +39,45 @@ export default function Home() {
 
     return (
         <div className={isDarkMode ? "dark" : ""}>
-            <Spotlight className="top-40 left-0 md:left-72 md:-top-20" fill="white"/>
+            <div className="bg-black text-white">
+                <Spotlight className="top-40 left-0 md:left-60 md:-top-5" fill="white"/>
 
-            <div>
-                <GradualSpacing
-                    className="relative z-10 mt-72 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
-                    text="Build & Ship your next"
-                />
+                <div>
+                    <GradualSpacing
+                        className="relative z-10 mt-72 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
+                        text="Build & Ship your next"
+                    />
 
-            <div className="justify-center items-center w-full">
-                <div className="flex ml-[44rem] items-center space-x-4 md:space-x-8">
-                    <div
-                        className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem] whitespace-nowrap">
-                        <GradualSpacing className="inline-block" text="digital"/>
+                    <div className="justify-center items-center w-full">
+                        <div className="flex ml-[44rem] items-center space-x-4 md:space-x-8">
+                            <div
+                                className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem] whitespace-nowrap">
+                                <GradualSpacing className="inline-block" text="digital"/>
+                            </div>
+
+                            <div className="relative z-10">
+                                <WordRotate
+                                    className="font-bold text-[#CCCCCC] md:text-7xl whitespace-nowrap"
+                                    words={["product", "presence", "brand", "experience", "design", "interface"]}
+                                />
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="relative z-10">
-                        <WordRotate
-                            className="font-bold text-[#CCCCCC] md:text-7xl whitespace-nowrap"
-                            words={["product", "presence", "brand", "experience", "design", "interface"]}
-                        />
+                    <div className="flex items-center justify-center w-full mt-24">
+                        <AnimatedTooltip items={people}/>
+                    </div>
+
+                    <div className="flex ml-5 flex-col items-center">
+                        <ShinyButton className="mt-16 mb-16">ESTIMATE PROJECT</ShinyButton>
                     </div>
                 </div>
             </div>
 
-            <div className="flex items-center justify-center w-full mt-20 pr-5">
-                <AnimatedTooltip items={people}/>
+            <div className="bg-white">
+                <VelocityText/>
+                <div className="h-[1000vh] bg-transparent"/>
             </div>
-
-                <div className="flex flex-col items-center">
-                    <ShinyButton className="mt-20 mb-20">ESTIMATE PROJECT</ShinyButton>
-                </div>
-            </div>
-
-                <VelocityText />
-
-
         </div>
     );
 }
