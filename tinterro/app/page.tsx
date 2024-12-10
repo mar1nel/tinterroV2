@@ -45,7 +45,7 @@ export default function Home() {
         <div className={isDarkMode ? "dark" : ""}>
             <div className="bg-black text-white">
                 <Spotlight className="top-40 left-0 md:left-60 md:-top-5" fill="white"/>
-                <CardNumber number="199$" label="Starting Price" top="40%" right="10%" />
+                <CardNumber number="199$" label="Starting Price" top="40%" right="15%" />
                 <div>
                     <GradualSpacing
                         className="relative z-10 mt-72 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
