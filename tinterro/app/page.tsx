@@ -80,36 +80,30 @@ export default function Home() {
             <div className="bg-white">
                 <VelocityText/>
 
-                <h1 className="text-6xl font-bold flex items-center justify-center mt-72 w-full">Loved by people all <br/> over the Romania</h1>
+                <h1 className="text-6xl font-bold flex items-center justify-center mt-72 w-full">Loved by people
+                    all <br/> over the Romania</h1>
+
+                <h1 className="text-xl max-w-5xl mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center">
+                    We've helped businesses and individuals across Romania create websites they're proud of.<br/>
+                    Whether you're just starting out or looking to upgrade, we make the process easy and
+                    stress-free.<br/>
+                    Check out what some of our clients think.
+                </h1>
+
 
                 <GridPattern
-                    width={30}
-                    height={30}
-                    x={-1}
-                    y={-1}
-                    strokeDasharray={"4 2"}
                     className={cn(
                         "absolute left-[780px] top-[-380px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                     )}
                 />
 
                 <GridPattern
-                    width={30}
-                    height={30}
-                    x={-1}
-                    y={-1}
-                    strokeDasharray={"4 2"}
                     className={cn(
                         "absolute z-[99] left-[890px] top-[990px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                     )}
                 />
 
                 <GridPattern
-                    width={30}
-                    height={30}
-                    x={-1}
-                    y={-1}
-                    strokeDasharray={"4 2"}
                     className={cn(
                         "absolute z-[99] left-[-780px] top-[700px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                     )}
@@ -118,19 +112,14 @@ export default function Home() {
                 <MiddlePage/>
 
                 <div className="mt-20">
-                    <h1 className="text-xl flex items-center justify-center w-full">Technologies We Trust to Build the Future</h1>
+                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">Technologies We Trust to Build the Future</h1>
 
                     <LogoSection/>
                 </div>
 
                 <GridPattern
-                    width={30}
-                    height={30}
-                    x={-1}
-                    y={-1}
-                    strokeDasharray={"4 2"}
                     className={cn(
-                        "absolute z-[99] left-[700px] top-[1850px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                        "absolute left-[700px] top-[1850px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                     )}
                 />
 
