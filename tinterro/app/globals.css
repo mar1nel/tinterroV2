@@ -23,11 +23,16 @@ a {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, 'Wix Madefor Display', sans-serif;
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+h1 {
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
 
 @layer utilities {
   .text-balance {

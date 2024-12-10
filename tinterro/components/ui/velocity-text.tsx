@@ -20,7 +20,7 @@ export const VelocityText: React.FC = () => {
     const x = useSpring(xRaw, { mass: 3, stiffness: 400, damping: 50 });
 
     return (
-        <section className="relative bg-neutral-50 text-neutral-950 h-[65px]">
+        <section className="relative bg-white text-neutral-950 h-[65px]">
             <div className="sticky top-0 h-[150px] overflow-hidden">
                 <motion.p
                     style={{ skewX, x }}

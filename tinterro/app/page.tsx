@@ -3,9 +3,12 @@ import WordRotate from "@/components/ui/word-rotate";
 import {Spotlight} from "@/components/ui/spotlight";
 import {AnimatedTooltip} from "@/components/ui/animated-tooltip";
 import React from "react";
-import {RainbowButton} from "@/components/ui/rainbow-button";
 import ShinyButton from "@/components/ui/shiny-button";
 import VelocityText from "@/components/ui/velocity-text";
+import GridPattern from "@/components/ui/grid-pattern";
+import {cn} from "@/lib/utils";
+import MiddlePage from "@/components/pages/middle";
+import LogoSection from "@/components/ui/logo-section";
 
 export default function Home() {
 
@@ -69,15 +72,60 @@ export default function Home() {
                     </div>
 
                     <div className="flex ml-5 flex-col items-center">
-                        <ShinyButton className="mt-16 mb-16">ESTIMATE PROJECT</ShinyButton>
+                        <ShinyButton className="mt-16 mb-28">ESTIMATE PROJECT</ShinyButton>
                     </div>
                 </div>
             </div>
 
             <div className="bg-white">
                 <VelocityText/>
+
+                <h1 className="text-6xl font-bold flex items-center justify-center mt-72 w-full">Loved by people all <br/> over the Romania</h1>
+
+                <GridPattern
+                    width={30}
+                    height={30}
+                    x={-1}
+                    y={-1}
+                    strokeDasharray={"4 2"}
+                    className={cn(
+                        "absolute left-[780px] top-[-380px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                    )}
+                />
+
+                <GridPattern
+                    width={30}
+                    height={30}
+                    x={-1}
+                    y={-1}
+                    strokeDasharray={"4 2"}
+                    className={cn(
+                        "absolute left-[780px] top-[990px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                    )}
+                />
+
+                <GridPattern
+                    width={30}
+                    height={30}
+                    x={-1}
+                    y={-1}
+                    strokeDasharray={"4 2"}
+                    className={cn(
+                        "absolute left-[-780px] top-[700px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                    )}
+                />
+
+                <MiddlePage/>
+
+                <div className="mt-20">
+                    <LogoSection />
+                </div>
+
                 <div className="h-[1000vh] bg-transparent"/>
             </div>
+
+
+
         </div>
     );
 }
