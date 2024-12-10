@@ -100,7 +100,7 @@ export default function Home() {
                     y={-1}
                     strokeDasharray={"4 2"}
                     className={cn(
-                        "absolute left-[780px] top-[990px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                        "absolute z-[99] left-[890px] top-[990px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                     )}
                 />
 
@@ -111,19 +111,31 @@ export default function Home() {
                     y={-1}
                     strokeDasharray={"4 2"}
                     className={cn(
-                        "absolute left-[-780px] top-[700px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                        "absolute z-[99] left-[-780px] top-[700px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                     )}
                 />
 
                 <MiddlePage/>
 
                 <div className="mt-20">
-                    <LogoSection />
+                    <h1 className="text-xl flex items-center justify-center w-full">Technologies We Trust to Build the Future</h1>
+
+                    <LogoSection/>
                 </div>
+
+                <GridPattern
+                    width={30}
+                    height={30}
+                    x={-1}
+                    y={-1}
+                    strokeDasharray={"4 2"}
+                    className={cn(
+                        "absolute z-[99] left-[700px] top-[1850px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                    )}
+                />
 
                 <div className="h-[1000vh] bg-transparent"/>
             </div>
-
 
 
         </div>
