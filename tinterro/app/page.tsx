@@ -10,6 +10,8 @@ import {cn} from "@/lib/utils";
 import MiddlePage from "@/components/pages/middle";
 import LogoSection from "@/components/ui/logo-section";
 import CardNumber from "@/components/ui/card-number";
+import {ContainerScroll} from "@/components/ui/container-scroll-animation";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -113,7 +115,8 @@ export default function Home() {
                 <MiddlePage/>
 
                 <div className="mt-20">
-                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">Technologies We Trust to Build the Future</h1>
+                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">Technologies We Trust
+                        to Build the Future</h1>
 
                     <LogoSection/>
                 </div>
@@ -124,6 +127,38 @@ export default function Home() {
                     )}
                 />
 
+                <div className="flex flex-col overflow-hidden">
+                    <ContainerScroll
+                    titleComponent={
+                            <>
+                                <h1 className="text-4xl font-semibold text-black dark:text-dark">
+                                    From Concept to Creation<br/>
+                                    <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                        Explore Our Work
+                    </span>
+                                </h1>
+                            </>
+                        }
+                    >
+                        <Image
+                            src="/images/showcase.png"
+                            alt="hero"
+                            layout="responsive"
+                            width={1200}
+                            height={780}
+                            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+                            draggable={false}
+                        />
+                    </ContainerScroll>
+
+                    <h1 className="text-xl max-w-5xl -mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center">
+                        We've helped businesses and individuals across Romania create websites they're proud of.<br/>
+                        Whether you're just starting out or looking to upgrade, we make the process easy and
+                        stress-free.<br/>
+                        Check out what some of our clients think.
+                    </h1>
+
+                </div>
                 <div className="h-[1000vh] bg-transparent"/>
             </div>
 
