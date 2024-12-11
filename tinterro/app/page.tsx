@@ -12,6 +12,8 @@ import LogoSection from "@/components/ui/logo-section";
 import CardNumber from "@/components/ui/card-number";
 import {ContainerScroll} from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
+import NumberTicker from "@/components/ui/number-ticker";
+import {SlideTabs} from "@/components/ui/slide-tabs";
 
 export default function Home() {
 
@@ -46,11 +48,16 @@ export default function Home() {
     return (
         <div className={isDarkMode ? "dark" : ""}>
             <div className="bg-black text-white">
+
+                <div className="absolute inset-x-0 top-14 flex items-center justify-center">
+                    <SlideTabs/>
+                </div>
+
                 <Spotlight className="top-40 left-0 md:left-60 md:-top-5" fill="white"/>
-                <CardNumber number="199$" label="Starting Price" top="40%" right="15%" />
+                <CardNumber number="199$" label="Starting Price" top="40%" right="15%"/>
                 <div>
                     <GradualSpacing
-                        className="relative z-10 mt-72 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
+                        className="relative z-10 mt-64 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
                         text="Build & Ship your next"
                     />
 
@@ -127,6 +134,18 @@ export default function Home() {
                     )}
                 />
 
+                <GridPattern
+                    className={cn(
+                        "absolute -left-[500px] top-[2250px] w-full [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
+                    )}
+                />
+
+                <GridPattern
+                    className={cn(
+                        "absolute left-[500px] top-[2700px] w-full [mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
+                    )}
+                />
+
                 <div className="flex flex-col overflow-hidden">
                     <ContainerScroll
                     titleComponent={
@@ -152,15 +171,53 @@ export default function Home() {
                     </ContainerScroll>
 
                     <h1 className="text-xl max-w-5xl -mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center">
-                        We've helped businesses and individuals across Romania create websites they're proud of.<br/>
-                        Whether you're just starting out or looking to upgrade, we make the process easy and
-                        stress-free.<br/>
-                        Check out what some of our clients think.
+                        Whether it's a complex website redesign or a custom software project, our team excels at breaking down problems with effective solutions., finding the smartest paths forward, and delivering results that exceed expectations.
+                        Our process is all about creativity, and precision, that every project not only works flawlessly but also looks incredible.
                     </h1>
+
+
+                    <GradualSpacing
+                        className="relative z-10 mt-36 font-display text-center text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem]"
+                        text="Achieve Exceptional Results"
+                    />
+                    <GradualSpacing
+                        className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem]"
+                        text="with Our Expertise"
+                    />
+
+                    <div className="flex justify-center items-center gap-28 mt-16 font-bold text-7xl tracking-[-5px]">
+                        <div className="flex items-center space-x-2">
+                            <NumberTicker value={500}/>
+                            <span>+</span>
+                        </div>
+
+                        <div className="flex items-center space-x-2">
+                            <NumberTicker value={215}/>
+                            <span>+</span>
+                        </div>
+
+                        <div className="flex items-center space-x-2">
+                            <NumberTicker value={10}/>
+                            <span>k+</span>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center gap-[150px] text-gray-400 text-xl mt-2 tracking-[1px]">
+                        <div>SAVED HOURS</div>
+                        <div>PROTOTYPES</div>
+                        <div>LINES OF CODE</div>
+                    </div>
 
                 </div>
                 <div className="h-[1000vh] bg-transparent"/>
+
             </div>
+
+            <GridPattern
+                className={cn(
+                    "absolute top-[3600px] w-full [mask-image:radial-gradient(_circle_at_center,white,transparent)]"
+                )}
+            />
 
 
         </div>
