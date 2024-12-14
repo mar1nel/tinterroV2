@@ -47,30 +47,32 @@ export default function Home() {
 
     return (
         <div className={isDarkMode ? "dark" : ""}>
-            <div className="bg-black text-white">
-
-                <div className="absolute inset-x-0 top-14 flex items-center justify-center">
+            <div className="bg-black text-white overflow-hidden max-w-screen">
+                <div
+                    className="absolute inset-x-0 top-14 flex items-center justify-center max-w-full overflow-x-hidden">
                     <SlideTabs/>
                 </div>
 
-                <Spotlight className="top-40 left-0 md:left-60 md:-top-5" fill="white"/>
-                <CardNumber number="199$" label="Starting Price" top="40%" right="15%"/>
+
+                <Spotlight className="top-40 left-0 md:left-auto md:translate-x-1/2 md:-top-5" fill="white"/>
+                {/*<CardNumber number="199$" label="Starting Price" top="40%" right="10%" />*/}
+
                 <div>
                     <GradualSpacing
-                        className="relative z-10 mt-64 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
+                        className="relative z-10 mt-64 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem] "
                         text="Build & Ship your next"
                     />
 
-                    <div className="justify-center items-center w-full">
-                        <div className="flex ml-[44rem] items-center space-x-4 md:space-x-8">
+                    <div className="flex flex-col justify-center items-center w-full px-4">
+                        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                             <div
-                                className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem] whitespace-nowrap">
+                                className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] sm:text-5xl md:text-7xl md:leading-[5rem] whitespace-nowrap">
                                 <GradualSpacing className="inline-block" text="digital"/>
                             </div>
 
-                            <div className="relative z-10">
+                            <div className="relative z-10 mt-0">
                                 <WordRotate
-                                    className="font-bold text-[#CCCCCC] md:text-7xl whitespace-nowrap"
+                                    className="font-bold text-[#CCCCCC] text-4xl sm:text-5xl md:text-7xl whitespace-nowrap"
                                     words={["product", "presence", "brand", "experience", "design", "interface"]}
                                 />
                             </div>
@@ -87,37 +89,40 @@ export default function Home() {
                 </div>
             </div>
 
+
             <div className="bg-white">
                 <VelocityText/>
 
-                <h1 className="text-6xl font-bold flex items-center justify-center mt-72 w-full">Loved by people
-                    all <br/> over the Romania</h1>
+                <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-36 md:mt-72 w-full">
+                    Loved by people all <br /> over the Romania
+                </h1>
 
-                <h1 className="text-xl max-w-5xl mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center">
-                    We've helped businesses and individuals across Romania create websites they're proud of.<br/>
+
+                <h1 className="text-center text-sm-xl sm:text-base md:text-xl max-w-3xl sm:max-w-4xl md:max-w-5xl mt-4 sm:mt-6 md:mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto">
+                    We've helped businesses and individuals across Romania create websites they're proud of.<br />
                     Whether you're just starting out or looking to upgrade, we make the process easy and
                     stress-free.<br/>
                     Check out what some of our clients think.
                 </h1>
 
 
-                <GridPattern
-                    className={cn(
-                        "absolute left-[780px] top-[-380px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
-                    )}
-                />
-
-                <GridPattern
-                    className={cn(
-                        "absolute z-[99] left-[890px] top-[990px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
-                    )}
-                />
-
-                <GridPattern
-                    className={cn(
-                        "absolute z-[99] left-[-780px] top-[700px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
-                    )}
-                />
+                {/*<GridPattern*/}
+                {/*    className={cn(*/}
+                {/*        "absolute left-[50%] top-[-10%] transform -translate-x-1/2 w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
+                {/*    )}*/}
+                {/*/>*/}
+                
+                {/*<GridPattern*/}
+                {/*    className={cn(*/}
+                {/*        "absolute z-[99] left-[70%] top-[80%] transform -translate-x-1/2 w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
+                {/*    )}*/}
+                {/*/>*/}
+                
+                {/*<GridPattern*/}
+                {/*    className={cn(*/}
+                {/*        "absolute z-[99] left-[20%] top-[50%] transform -translate-x-1/2 w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
+                {/*    )}*/}
+                {/*/>*/}
 
                 <MiddlePage/>
 
@@ -128,31 +133,32 @@ export default function Home() {
                     <LogoSection/>
                 </div>
 
-                <GridPattern
-                    className={cn(
-                        "absolute left-[700px] top-[1850px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
-                    )}
-                />
+                {/*<GridPattern*/}
+                {/*    className={cn(*/}
+                {/*        "absolute left-[700px] top-[1850px] w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
+                {/*    )}*/}
+                {/*/>*/}
 
-                <GridPattern
-                    className={cn(
-                        "absolute -left-[500px] top-[2250px] w-full [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
-                    )}
-                />
+                {/*<GridPattern*/}
+                {/*    className={cn(*/}
+                {/*        "absolute -left-[500px] top-[2250px] w-full [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"*/}
+                {/*    )}*/}
+                {/*/>*/}
 
-                <GridPattern
-                    className={cn(
-                        "absolute left-[500px] top-[2700px] w-full [mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
-                    )}
-                />
+                {/*<GridPattern*/}
+                {/*    className={cn(*/}
+                {/*        "absolute left-[500px] top-[2700px] w-full [mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"*/}
+                {/*    )}*/}
+                {/*/>*/}
 
-                <div className="flex flex-col overflow-hidden">
+                <div className="flex flex-col overflow-hidden px-4 md:px-8">
                     <ContainerScroll
-                    titleComponent={
+                        titleComponent={
                             <>
-                                <h1 className="text-4xl font-semibold text-black dark:text-dark">
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black dark:text-dark text-center">
                                     From Concept to Creation<br/>
-                                    <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                                    <span
+                                        className="text-4xl md:text-[4rem] lg:text-[6rem] font-bold mt-1 leading-tight">
                         Explore Our Work
                     </span>
                                 </h1>
@@ -170,54 +176,77 @@ export default function Home() {
                         />
                     </ContainerScroll>
 
-                    <h1 className="text-xl max-w-5xl -mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center">
-                        Whether it's a complex website redesign or a custom software project, our team excels at breaking down problems with effective solutions., finding the smartest paths forward, and delivering results that exceed expectations.
-                        Our process is all about creativity, and precision, that every project not only works flawlessly but also looks incredible.
+                    <h1 className="text-xl sm:text-base md:text-lg lg:text-xl max-w-5xl -mt-28 sm:-mt-36 md:-mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center px-4">
+                        Whether it's a complex website redesign or a custom software project, our team excels at
+                        breaking down problems with effective solutions, finding the smartest paths forward, and
+                        delivering results that exceed expectations. Our process is all about creativity and precision,
+                        ensuring that every project not only works flawlessly but also looks incredible.
                     </h1>
 
-
+                    {/* For larger screens (medium and up) */}
                     <GradualSpacing
-                        className="relative z-10 mt-36 font-display text-center text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem]"
+                        className="relative z-10 mt-20 sm:mt-28 font-display text-center text-3xl sm:text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem] hidden sm:block"
                         text="Achieve Exceptional Results"
                     />
+
+                    {/* For larger screens (with the second part) */}
                     <GradualSpacing
-                        className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem]"
+                        className="relative z-10 font-display text-center text-3xl sm:text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem] hidden sm:block"
                         text="with Our Expertise"
                     />
 
-                    <div className="flex justify-center items-center gap-28 mt-16 font-bold text-7xl tracking-[-5px]">
-                        <div className="flex items-center space-x-2">
+                    {/* For small screens (mobile) */}
+                    <GradualSpacing
+                        className="block sm:hidden relative z-10 mt-20 sm:mt-28 font-display text-center text-3xl sm:text-4xl md:text-5xl font-bold text-black"
+                        text="Achieve Exceptional"
+                    />
+
+                    <GradualSpacing
+                        className="block sm:hidden relative z-10 font-display text-center text-3xl sm:text-4xl md:text-5xl font-bold  text-black"
+                        text="Results with"
+                    />
+
+                    <GradualSpacing
+                        className="block sm:hidden relative z-10 font-display text-center text-3xl sm:text-4xl md:text-5xl font-bold  text-black"
+                        text="Our Expertise"
+                    />
+
+
+                    <div
+                        className="flex flex-wrap justify-center items-center gap-12 sm:gap-16 md:gap-32 mt-12 sm:mt-16 font-bold text-3xl sm:text-5xl md:text-7xl tracking-[-2px] sm:tracking-[-5px]">
+                        <div className="flex items-center space-x-1">
                             <NumberTicker value={500}/>
                             <span>+</span>
                         </div>
 
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-1">
                             <NumberTicker value={215}/>
                             <span>+</span>
                         </div>
 
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-1">
                             <NumberTicker value={10}/>
-                            <span>k+</span>
+                            <span>k +</span>
                         </div>
                     </div>
 
-                    <div className="flex justify-center gap-[150px] text-gray-400 text-xl mt-2 tracking-[1px]">
+                    <div
+                        className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-[150px] text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
                         <div>SAVED HOURS</div>
                         <div>PROTOTYPES</div>
                         <div>LINES OF CODE</div>
                     </div>
-
                 </div>
+
                 <div className="h-[1000vh] bg-transparent"/>
 
             </div>
 
-            <GridPattern
-                className={cn(
-                    "absolute top-[3600px] w-full [mask-image:radial-gradient(_circle_at_center,white,transparent)]"
-                )}
-            />
+            {/*<GridPattern*/}
+            {/*    className={cn(*/}
+            {/*        "absolute top-[3600px] w-full [mask-image:radial-gradient(_circle_at_center,white,transparent)]"*/}
+            {/*    )}*/}
+            {/*/>*/}
 
 
         </div>

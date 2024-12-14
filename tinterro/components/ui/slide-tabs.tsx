@@ -18,12 +18,12 @@ export const SlideTabs = () => {
                     opacity: 0,
                 }));
             }}
-            className="relative mx-auto flex w-fit rounded-full border-2 border-white bg-black p-1"
+            className="relative mx-auto flex w-fit rounded-full border-2 bg-black p-1" //border-white
         >
-            <Tab setPosition={setPosition}>Home</Tab>
+            <Tab setPosition={setPosition}>About</Tab>
             <Tab setPosition={setPosition}>Pricing</Tab>
-            <Tab setPosition={setPosition}>Features</Tab>
-            <Tab setPosition={setPosition}>Docs</Tab>
+            <Tab setPosition={setPosition}>Resources</Tab>
+            <Tab setPosition={setPosition}>Services</Tab>
             <Tab setPosition={setPosition}>Blog</Tab>
 
             <Cursor position={position} />

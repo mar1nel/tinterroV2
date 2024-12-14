@@ -2,7 +2,7 @@
 
 export default function LogoSection() {
     return (
-        <div className="flex flex-wrap justify-center items-center gap-4">
+        <div className="flex flex-wrap justify-center items-center gap-4 px-2 sm:px-4">
             {[
                 { src: "./logos/html5-original.svg", alt: "HTML5 Logo" },
                 { src: "./logos/nestjs-original.svg", alt: "NestJS Logo" },
@@ -17,11 +17,11 @@ export default function LogoSection() {
             ].map((logo, index) => (
                 <div
                     key={index}
-                    className="group w-24 h-32 mt-5 bg-white flex items-center justify-center transition-all duration-300 ease-in-out">
+                    className="group w-16 h-24 sm:w-24 sm:h-32 bg-white flex items-center justify-center transition-all duration-300 ease-in-out">
                     <img
                         src={logo.src}
                         alt={logo.alt}
-                        className="w-16 h-16 object-contain grayscale group-hover:grayscale-0 transition-all"
+                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain grayscale group-hover:grayscale-0 transition-all"
                     />
                 </div>
             ))}
