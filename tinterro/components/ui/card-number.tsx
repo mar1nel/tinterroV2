@@ -10,7 +10,12 @@ interface CardNumberProps {
     right?: string;
     left?: string;
     bottom?: string;
-    rotate?: string;
+    size?: number;
+}
+
+// Extend CSSProperties to include custom properties
+interface CustomStyle extends React.CSSProperties {
+    "--size"?: number; // Define --size as a valid custom property
 }
 
 const CardNumber: React.FC<CardNumberProps> = ({
@@ -20,19 +25,18 @@ const CardNumber: React.FC<CardNumberProps> = ({
                                                    right,
                                                    left,
                                                    bottom,
-                                                   rotate = "10deg",
+                                                   size = 1, // Default size is 1 (normal size)
                                                }) => {
+    const style: CustomStyle = {
+        top: top || "auto",
+        right: right || "auto",
+        left: left || "auto",
+        bottom: bottom || "auto",
+        "--size": size,
+    };
+
     return (
-        <div
-            className="floating-card"
-            style={{
-                top: top || "auto",
-                right: right || "auto",
-                left: left || "auto",
-                bottom: bottom || "auto",
-                transform: `rotate(${rotate})`,
-            }}
-        >
+        <div className="floating-card" style={style}>
             <div className="outer">
                 <div className="dot"></div>
                 <div className="card">
