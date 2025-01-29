@@ -34,6 +34,12 @@ h1 {
   font-family: 'Wix Madefor Display', sans-serif;
 }
 
+.bg-pattern {
+  background: radial-gradient(circle, rgba(128, 128, 128, 0.35), rgba(128, 128, 128, 0.1) 20%, transparent 90%),
+  radial-gradient(circle at 30px 10px, #c0c0c0 2px, transparent 2px),
+  radial-gradient(circle at 30px 20px, #c0c0c0 2px, transparent 2px);
+  background-size: 20px 20px;
+}
 
 @layer utilities {
   .text-balance {

@@ -15,6 +15,7 @@ import Image from "next/image";
 import NumberTicker from "@/components/ui/number-ticker";
 import {SlideTabs} from "@/components/ui/slide-tabs";
 import CardNumber from "@/components/ui/card-number";
+import {BentoGridSecondDemo} from "@/components/ui/BentoGridSecondDemo";
 
 export default function Home() {
 
@@ -55,7 +56,8 @@ export default function Home() {
                 </div>
 
                 <Spotlight className="top-40 left-0 md:left-auto md:translate-x-1/2 md:-top-5" fill="white"/>
-                {/*<CardNumber size={0.6} number="199$" label="Starting Price" top="45%" right="15%" />*/}
+
+                <CardNumber size={1} number="199$" label="Starting Price" top="45%" right="15%"/>
 
                 <div>
                     <GradualSpacing
@@ -94,12 +96,12 @@ export default function Home() {
                 <VelocityText/>
 
                 <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-36 md:mt-72 w-full">
-                    Loved by people all <br /> over the Romania
+                    Loved by people all <br/> over the Romania
                 </h1>
 
 
                 <h1 className="text-center text-sm-xl sm:text-base md:text-xl max-w-3xl sm:max-w-4xl md:max-w-5xl mt-4 sm:mt-6 md:mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto">
-                    We've helped businesses and individuals across Romania create websites they're proud of.<br />
+                    We've helped businesses and individuals across Romania create websites they're proud of.<br/>
                     Whether you're just starting out or looking to upgrade, we make the process easy and
                     stress-free.<br/>
                     Check out what some of our clients think.
@@ -111,13 +113,13 @@ export default function Home() {
                 {/*        "absolute left-[50%] top-[-10%] transform -translate-x-1/2 w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
                 {/*    )}*/}
                 {/*/>*/}
-                
+
                 {/*<GridPattern*/}
                 {/*    className={cn(*/}
                 {/*        "absolute z-[99] left-[70%] top-[80%] transform -translate-x-1/2 w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
                 {/*    )}*/}
                 {/*/>*/}
-                
+
                 {/*<GridPattern*/}
                 {/*    className={cn(*/}
                 {/*        "absolute z-[99] left-[20%] top-[50%] transform -translate-x-1/2 w-full [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"*/}
@@ -234,11 +236,21 @@ export default function Home() {
                         <div>PROTOTYPES</div>
                         <div>LINES OF CODE</div>
                     </div>
+
+                    <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-40 md:mt-72 w-full">
+                        Loved by people all <br/> over the Romania
+                    </h1>
+
+                    <div className={`pt-16 ${isDarkMode ? "" : "dark"}`} style={{minHeight: '100vh'}}>
+                        <BentoGridSecondDemo/>
+                    </div>
+
                 </div>
 
                 <div className="h-[1000vh] bg-transparent"/>
 
             </div>
+
 
             {/*<GridPattern*/}
             {/*    className={cn(*/}

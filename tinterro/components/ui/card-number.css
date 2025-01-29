@@ -2,6 +2,12 @@
     --size: 1; /* Default size scale */
 }
 
+@media (max-width: 1750px) {
+    .floating-card {
+        display: none;
+    }
+}
+
 .floating-card {
     position: absolute;
     z-index: 1000;

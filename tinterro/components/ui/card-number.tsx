@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import "./card-number.css";
 
 interface CardNumberProps {
@@ -13,9 +10,8 @@ interface CardNumberProps {
     size?: number;
 }
 
-// Extend CSSProperties to include custom properties
 interface CustomStyle extends React.CSSProperties {
-    "--size"?: number; // Define --size as a valid custom property
+    "--size"?: number;
 }
 
 const CardNumber: React.FC<CardNumberProps> = ({
