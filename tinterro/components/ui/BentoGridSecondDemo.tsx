@@ -1,9 +1,6 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import {IconClipboardCopy, IconFileBroken, IconShoppingCart, IconSignature, IconTableColumn} from "@tabler/icons-react";
-import { motion } from "framer-motion";
+import { IconClipboardCopy, IconFileBroken, IconShoppingCart, IconSignature, IconTableColumn } from "@tabler/icons-react";
 
 export function BentoGridSecondDemo() {
     return (
@@ -25,7 +22,6 @@ export function BentoGridSecondDemo() {
 const Skeleton = () => (
     <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-dot-black/[0.5] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] bg-neutral-100"></div>
 );
-
 
 const items = [
     {

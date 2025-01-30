@@ -13,8 +13,8 @@ import WordRotate from "@/components/ui/word-rotate";
 import CardNumber from "@/components/ui/card-number";
 import Image from "next/image";
 import React from "react";
-import GridPattern from "@/components/ui/grid-pattern";
-import {cn} from "@/lib/utils";
+// import GridPattern from "@/components/ui/grid-pattern";
+// import {cn} from "@/lib/utils";
 // import CardNumber from "@/components/ui/card-number";
 
 export default function Home() {
@@ -102,8 +102,8 @@ export default function Home() {
 
 
                 <h1 className="text-center text-lg sm:text-xl max-w-none lg:max-w-4xl 2xl:max-w-5xl mt-4 sm:mt-6 md:mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto px-4 sm:px-0">
-                    We've helped businesses and people in Romania build websites.<br/>
-                    Whether you're just starting out or looking to upgrade, we make the process easy.<br/>
+                    We&apos;ve helped businesses and people in Romania build websites.<br/>
+                    Whether you&apos;re just starting out or looking to upgrade, we make the process easy.<br/>
                     Check out what some of our clients think.
                 </h1>
 
@@ -179,7 +179,7 @@ export default function Home() {
                     </ContainerScroll>
 
                     <h1 className="text-xl sm:text-base md:text-lg lg:text-xl max-w-5xl -mt-28 sm:-mt-36 md:-mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center px-4">
-                        Whether it's a complex website redesign or a custom software project, our team excels at
+                        Whether it&apos;s a complex website redesign or a custom software project, our team excels at
                         breaking down problems with effective solutions, finding the smartest paths forward, and
                         delivering results that exceed expectations. Our process is all about creativity and precision,
                         ensuring that every project not only works flawlessly but also looks incredible.

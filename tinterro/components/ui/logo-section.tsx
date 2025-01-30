@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function LogoSection() {
     return (
@@ -18,7 +19,7 @@ export default function LogoSection() {
                 <div
                     key={index}
                     className="group w-16 h-24 sm:w-24 sm:h-32 bg-white flex items-center justify-center transition-all duration-300 ease-in-out">
-                    <img
+                    <Image
                         src={logo.src}
                         alt={logo.alt}
                         className="w-12 h-12 sm:w-16 sm:h-16 object-contain grayscale group-hover:grayscale-0 transition-all"
