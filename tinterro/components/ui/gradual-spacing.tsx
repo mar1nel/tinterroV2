@@ -13,58 +13,58 @@ interface GradualSpacingProps {
 }
 
 export default function GradualSpacing({
-                                         text,
-                                         duration = 0.5,
-                                         delayMultiple = 0.04,
-                                         framerProps = {
-                                           hidden: { opacity: 0, x: -20 },
-                                           visible: { opacity: 1, x: 0 },
-                                         },
-                                         className,
+                                           text,
+                                           duration = 0.5,
+                                           delayMultiple = 0.04,
+                                           framerProps = {
+                                               hidden: { opacity: 0, x: -20 },
+                                               visible: { opacity: 1, x: 0 },
+                                           },
+                                           className,
                                        }: GradualSpacingProps) {
-  const [inView, setInView] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+    const [inView, setInView] = useState(false);
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      const [entry] = entries;
-      if (entry.isIntersecting) {
-        setInView(true);
-      }
-    };
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setInView(true);
+                    setHasAnimated(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1, // Trigger the animation when 10% of the component is visible
-    });
+        if (containerRef.current) observer.observe(containerRef.current);
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+        return () => observer.disconnect();
+    }, [hasAnimated]);
 
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
-
-  return (
-      <div className="flex justify-center space-x-1" ref={containerRef}>
-        <AnimatePresence>
-          {text.split("").map((char, i) => (
-              <motion.h1
-                  key={i}
-                  initial="hidden"
-                  animate={inView ? "visible" : "hidden"} // Trigger animation based on visibility
-                  exit="hidden"
-                  variants={framerProps}
-                  transition={{ duration, delay: i * delayMultiple }}
-                  className={cn("drop-shadow-sm", className)}
-              >
-                {char === " " ? <span>&nbsp;</span> : char}
-              </motion.h1>
-          ))}
-        </AnimatePresence>
-      </div>
-  );
+    return (
+        <div
+            className={cn(
+                "flex flex-row justify-center whitespace-nowrap", // Prevents vertical stacking
+                className
+            )}
+            ref={containerRef}
+        >
+            <AnimatePresence>
+                {text.split("").map((char, i) => (
+                    <motion.span
+                        key={i}
+                        initial="hidden"
+                        animate={inView ? "visible" : "hidden"}
+                        exit="hidden"
+                        variants={framerProps}
+                        transition={{ duration, delay: i * delayMultiple }}
+                        className="inline-flex drop-shadow-sm"
+                    >
+                        {char === " " ? <span>&nbsp;</span> : char}
+                    </motion.span>
+                ))}
+            </AnimatePresence>
+        </div>
+    );
 }

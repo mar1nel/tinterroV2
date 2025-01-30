@@ -24,7 +24,7 @@ export const SlideTabs = () => {
             <Tab setPosition={setPosition}>Pricing</Tab>
             <Tab setPosition={setPosition}>Resources</Tab>
             <Tab setPosition={setPosition}>Services</Tab>
-            <Tab setPosition={setPosition}>Blog</Tab>
+            {/*<Tab setPosition={setPosition}>Blog</Tab>*/}
 
             <Cursor position={position} />
         </ul>

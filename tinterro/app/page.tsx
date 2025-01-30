@@ -1,21 +1,21 @@
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import WordRotate from "@/components/ui/word-rotate";
-import {Spotlight} from "@/components/ui/spotlight";
+import {BentoGridSecondDemo} from "@/components/ui/BentoGridSecondDemo";
+import {ContainerScroll} from "@/components/ui/container-scroll-animation";
 import {AnimatedTooltip} from "@/components/ui/animated-tooltip";
-import React from "react";
-import ShinyButton from "@/components/ui/shiny-button";
+import GradualSpacing from "@/components/ui/gradual-spacing";
 import VelocityText from "@/components/ui/velocity-text";
+import NumberTicker from "@/components/ui/number-ticker";
+import ShinyButton from "@/components/ui/shiny-button";
+import LogoSection from "@/components/ui/logo-section";
+import {SlideTabs} from "@/components/ui/slide-tabs";
+import {Spotlight} from "@/components/ui/spotlight";
+import MiddlePage from "@/components/pages/middle";
+import WordRotate from "@/components/ui/word-rotate";
+import CardNumber from "@/components/ui/card-number";
+import Image from "next/image";
+import React from "react";
 import GridPattern from "@/components/ui/grid-pattern";
 import {cn} from "@/lib/utils";
-import MiddlePage from "@/components/pages/middle";
-import LogoSection from "@/components/ui/logo-section";
 // import CardNumber from "@/components/ui/card-number";
-import {ContainerScroll} from "@/components/ui/container-scroll-animation";
-import Image from "next/image";
-import NumberTicker from "@/components/ui/number-ticker";
-import {SlideTabs} from "@/components/ui/slide-tabs";
-import CardNumber from "@/components/ui/card-number";
-import {BentoGridSecondDemo} from "@/components/ui/BentoGridSecondDemo";
 
 export default function Home() {
 
@@ -45,6 +45,7 @@ export default function Home() {
             image: "/images/open-position.jpg",
         },
     ];
+
     const isDarkMode = 1;
 
     return (
@@ -59,22 +60,22 @@ export default function Home() {
 
                 <CardNumber size={1} number="199$" label="Starting Price" top="45%" right="15%"/>
 
-                <div>
+                <div >
                     <GradualSpacing
-                        className="relative z-10 mt-64 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] md:text-7xl md:leading-[5rem] "
-                        text="Build & Ship your next"
+                        className="relative z-10 mt-64 font-display text-center text-4xl font-bold -tracking-wider text-[#CCCCCC] md:text-7xl md:leading-[5rem]"
+                        text="Build & Ship your"
                     />
 
                     <div className="flex flex-col justify-center items-center w-full px-4">
                         <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                             <div
-                                className="relative z-10 font-display text-center text-4xl font-bold -tracking-widest text-[#CCCCCC] sm:text-5xl md:text-7xl md:leading-[5rem] whitespace-nowrap">
+                                className="relative z-10 font-display text-center text-4xl font-bold -tracking-wide text-[#CCCCCC] sm:text-5xl md:text-7xl md:leading-[5rem] whitespace-nowrap">
                                 <GradualSpacing className="inline-block" text="digital"/>
                             </div>
 
                             <div className="relative z-10 mt-0">
                                 <WordRotate
-                                    className="font-bold text-[#CCCCCC] text-4xl sm:text-5xl md:text-7xl whitespace-nowrap"
+                                    className="font-bold text-[#CCCCCC] -tracking-wider text-4xl sm:text-5xl md:text-7xl whitespace-nowrap"
                                     words={["product", "presence", "brand", "experience", "design", "interface"]}
                                 />
                             </div>
@@ -100,10 +101,9 @@ export default function Home() {
                 </h1>
 
 
-                <h1 className="text-center text-sm-xl sm:text-base md:text-xl max-w-3xl sm:max-w-4xl md:max-w-5xl mt-4 sm:mt-6 md:mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto">
-                    We've helped businesses and individuals across Romania create websites they're proud of.<br/>
-                    Whether you're just starting out or looking to upgrade, we make the process easy and
-                    stress-free.<br/>
+                <h1 className="text-center text-lg sm:text-xl max-w-none lg:max-w-4xl 2xl:max-w-5xl mt-4 sm:mt-6 md:mt-8 text-zinc-800 flex flex-col items-center justify-center mx-auto px-4 sm:px-0">
+                    We've helped businesses and people in Romania build websites.<br/>
+                    Whether you're just starting out or looking to upgrade, we make the process easy.<br/>
                     Check out what some of our clients think.
                 </h1>
 
@@ -129,7 +129,7 @@ export default function Home() {
                 <MiddlePage/>
 
                 <div className="mt-20">
-                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">Technologies We Trust
+                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">Technologies we use
                         to Build the Future</h1>
 
                     <LogoSection/>
@@ -185,42 +185,30 @@ export default function Home() {
                         ensuring that every project not only works flawlessly but also looks incredible.
                     </h1>
 
-                    {/* For larger screens (medium and up) */}
                     <GradualSpacing
-                        className="relative z-10 mt-20 sm:mt-28 font-display text-center text-3xl sm:text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem] hidden sm:block"
+                        className="relative z-10 mt-20 sm:mt-28 font-display text-center font-bold text-black
+             text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl
+             leading-tight"
                         text="Achieve Exceptional Results"
                     />
 
                     <GradualSpacing
-                        className="relative z-10 font-display text-center text-3xl sm:text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem] hidden sm:block"
+                        className="relative z-10 font-display text-center font-bold text-black
+             text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl
+             leading-tight"
                         text="with Our Expertise"
-                    />
-
-                    <GradualSpacing
-                        className="block sm:hidden relative z-10 mt-20 sm:mt-28 font-display text-center text-3xl sm:text-4xl md:text-5xl font-bold text-black"
-                        text="Achieve Exceptional"
-                    />
-
-                    <GradualSpacing
-                        className="block sm:hidden relative z-10 font-display text-center text-3xl sm:text-4xl md:text-5xl font-bold  text-black"
-                        text="Results with"
-                    />
-
-                    <GradualSpacing
-                        className="block sm:hidden relative z-10 font-display text-center text-3xl sm:text-4xl md:text-5xl font-bold  text-black"
-                        text="Our Expertise"
                     />
 
 
                     <div
-                        className="flex flex-wrap justify-center items-center gap-12 sm:gap-16 md:gap-32 mt-12 sm:mt-16 font-bold text-3xl sm:text-5xl md:text-7xl tracking-[-2px] sm:tracking-[-5px]">
+                        className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-32 mt-12 sm:mt-16 font-bold text-3xl sm:text-5xl md:text-7xl tracking-[-2px] sm:tracking-[-5px]">
                         <div className="flex items-center space-x-1">
-                            <NumberTicker value={500}/>
+                            <NumberTicker value={500} />
                             <span>+</span>
                         </div>
 
                         <div className="flex items-center space-x-1">
-                            <NumberTicker value={215}/>
+                            <NumberTicker value={215} />
                             <span>+</span>
                         </div>
 
@@ -231,14 +219,15 @@ export default function Home() {
                     </div>
 
                     <div
-                        className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-[150px] text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
+                        className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-[150px] text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
                         <div>SAVED HOURS</div>
                         <div>PROTOTYPES</div>
                         <div>LINES OF CODE</div>
                     </div>
 
+
                     <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-40 md:mt-72 w-full">
-                        Loved by people all <br/> over the Romania
+                        Our Services <br/> and other things we do
                     </h1>
 
                     <div className={`pt-16 ${isDarkMode ? "" : "dark"}`} style={{minHeight: '100vh'}}>
