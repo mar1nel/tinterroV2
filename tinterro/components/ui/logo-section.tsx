@@ -22,6 +22,8 @@ export default function LogoSection() {
                     <Image
                         src={logo.src}
                         alt={logo.alt}
+                        width={64}
+                        height={64}
                         className="w-12 h-12 sm:w-16 sm:h-16 object-contain grayscale group-hover:grayscale-0 transition-all"
                     />
                 </div>
