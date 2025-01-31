@@ -187,7 +187,7 @@ export default function Home() {
 
                     <GradualSpacing
                         className="relative z-10 mt-20 sm:mt-28 font-display text-center font-bold text-black
-             text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl
+             text-2xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl
              leading-tight"
                         text="Achieve Exceptional Results"
                     />
@@ -200,29 +200,39 @@ export default function Home() {
                     />
 
 
-                    <div
-                        className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-32 mt-12 sm:mt-16 font-bold text-3xl sm:text-5xl md:text-7xl tracking-[-2px] sm:tracking-[-5px]">
-                        <div className="flex items-center space-x-1">
-                            <NumberTicker value={500} />
-                            <span>+</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-32 mt-12 sm:mt-16 font-bold text-3xl sm:text-5xl md:text-7xl tracking-[-2px] sm:tracking-[-5px]">
+                        {/* Wrapper for each value + label */}
+                        <div className="flex flex-col items-center">
+                            <div className="flex items-center space-x-1">
+                                <NumberTicker value={500} />
+                                <span>+</span>
+                            </div>
+                            <span className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
+      SAVED HOURS
+    </span>
                         </div>
 
-                        <div className="flex items-center space-x-1">
-                            <NumberTicker value={215} />
-                            <span>+</span>
+                        <div className="flex flex-col items-center">
+                            <div className="flex items-center space-x-1">
+                                <NumberTicker value={215} />
+                                <span>+</span>
+                            </div>
+                            <span
+                                className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
+      PROTOTYPES
+    </span>
                         </div>
 
-                        <div className="flex items-center space-x-1">
-                            <NumberTicker value={10}/>
-                            <span>k +</span>
+                        <div className="flex flex-col items-center">
+                            <div className="flex items-center space-x-1">
+                                <NumberTicker value={10}/>
+                                <span>k +</span>
+                            </div>
+                            <span
+                                className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
+      LINES OF CODE
+    </span>
                         </div>
-                    </div>
-
-                    <div
-                        className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-[150px] text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl mt-2 sm:mt-4 tracking-[1px]">
-                        <div>SAVED HOURS</div>
-                        <div>PROTOTYPES</div>
-                        <div>LINES OF CODE</div>
                     </div>
 
 
