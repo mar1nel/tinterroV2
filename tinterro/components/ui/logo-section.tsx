@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LogoSection() {
     return (
-        <div className="flex flex-wrap justify-center items-center gap-4 px-2 sm:px-4">
+        <div className="flex flex-wrap justify-center items-center gap-2 px-2 sm:px-4">
             {[
                 { src: "./logos/html5-original.svg", alt: "HTML5 Logo" },
                 { src: "./logos/nestjs-original.svg", alt: "NestJS Logo" },

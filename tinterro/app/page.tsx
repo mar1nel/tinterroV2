@@ -129,8 +129,9 @@ export default function Home() {
                 <MiddlePage/>
 
                 <div className="mt-20">
-                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">Technologies we use
-                        to Build the Future</h1>
+                    <h1 className="text-xl text-zinc-800 flex items-center justify-center w-full">
+                        Technologies we use to Build the Future
+                    </h1>
 
                     <LogoSection/>
                 </div>
@@ -236,7 +237,7 @@ export default function Home() {
                     </div>
 
 
-                    <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-40 md:mt-72 w-full">
+                    <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-20 md:mt-72 w-full">
                         Our Services <br/> and other things we do
                     </h1>
 
