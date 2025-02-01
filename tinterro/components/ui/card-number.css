@@ -1,5 +1,5 @@
 :root {
-    --size: 1; /* Default size scale */
+    --size: 1;
 }
 
 @media (max-width: 1750px) {
@@ -15,7 +15,7 @@
 }
 
 .outer {
-    width: calc(300px * var(--size)); /* Scale based on --size */
+    width: calc(300px * var(--size));
     height: calc(250px * var(--size));
     border-radius: calc(10px * var(--size));
     padding: calc(1px * var(--size));
@@ -23,6 +23,7 @@
     position: relative;
 }
 
+/*noinspection ALL*/
 .dot {
     width: calc(5px * var(--size));
     aspect-ratio: 1;
@@ -54,7 +55,7 @@
 
 .card .text {
     font-weight: bolder;
-    font-size: calc(4rem * var(--size)); /* Adjust font size */
+    font-size: calc(4rem * var(--size));
     background: linear-gradient(45deg, #000000 4%, #fff, #000);
     background-clip: text;
     color: transparent;

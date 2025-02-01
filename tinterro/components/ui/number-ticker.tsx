@@ -6,12 +6,12 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export default function NumberTicker({
-                                       value,
-                                       direction = "up",
-                                       delay = 0,
-                                       className,
-                                       decimalPlaces = 0,
-                                     }: {
+  value,
+  direction = "up",
+  delay = 0,
+  className,
+  decimalPlaces = 0,
+}: {
   value: number;
   direction?: "up" | "down";
   className?: string;
@@ -46,12 +46,12 @@ export default function NumberTicker({
   }, [springValue, decimalPlaces]);
 
   return (
-      <span
-          className={cn(
-              "inline-block tabular-nums text-black tracking-wider",
-              className
-          )}
-          ref={ref}
-      />
+    <span
+      className={cn(
+        "inline-block tabular-nums text-black tracking-wider",
+        className,
+      )}
+      ref={ref}
+    />
   );
 }

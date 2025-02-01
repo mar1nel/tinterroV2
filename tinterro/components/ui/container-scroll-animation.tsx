@@ -36,11 +36,11 @@ export const ContainerScroll = ({
 
   return (
     <div
-        className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20 -mt-24" // Moved the container up by 12 Tailwind units
+      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20 -mt-24" // Moved the container up by 12 Tailwind units
       ref={containerRef}
     >
       <div
-          className="py-5 md:py-20 w-full relative"
+        className="py-5 md:py-20 w-full relative"
         style={{
           perspective: "900px",
         }}
@@ -61,14 +61,14 @@ interface HeaderProps {
 
 export const Header = ({ translate, titleComponent }: HeaderProps) => {
   return (
-      <motion.div
-          style={{
-            translateY: translate,
-          }}
-          className="div max-w-5xl mx-auto text-center"
-      >
-        {titleComponent}
-      </motion.div>
+    <motion.div
+      style={{
+        translateY: translate,
+      }}
+      className="div max-w-5xl mx-auto text-center"
+    >
+      {titleComponent}
+    </motion.div>
   );
 };
 
