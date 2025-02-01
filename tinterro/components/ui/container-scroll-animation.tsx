@@ -72,7 +72,6 @@ export const Header = ({ translate, titleComponent }: HeaderProps) => {
   );
 };
 
-
 export const Card = ({
   rotate,
   scale,

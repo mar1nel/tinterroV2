@@ -168,15 +168,18 @@ export default function Home() {
                             </>
                         }
                     >
-                        <Image
-                            src="/images/showcase.png"
-                            alt="hero"
-                            layout="responsive"
-                            width={1200}
-                            height={780}
-                            className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                            draggable={false}
-                        />
+                        <div className="w-full h-full flex items-center justify-center overflow-hidden">
+                            <Image
+                                src="/images/showcase.png"
+                                alt="hero"
+                                width={1000}
+                                height={700}
+                                className="w-full h-full object-cover rounded-2xl"
+                                draggable={false}
+                            />
+                        </div>
+
+
                     </ContainerScroll>
 
                     <h1 className="text-xl sm:text-base md:text-lg lg:text-xl max-w-5xl -mt-28 sm:-mt-36 md:-mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center px-4">
