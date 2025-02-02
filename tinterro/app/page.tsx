@@ -13,6 +13,8 @@ import WordRotate from "@/components/ui/word-rotate";
 import CardNumber from "@/components/ui/card-number";
 import Image from "next/image";
 import React from "react";
+import { PinContainer } from "@/components/ui/3d-pin";
+import { AnimatedPinDemo } from "@/components/ui/animatedPinDemo";
 // import GridPattern from "@/components/ui/grid-pattern";
 // import {cn} from "@/lib/utils";
 // import CardNumber from "@/components/ui/card-number";
@@ -260,6 +262,12 @@ export default function Home() {
             <BentoGridSecondDemo />
           </div>
         </div>
+
+        <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-20 md:mt-36 w-full">
+          More about <br /> Tinterro
+        </h1>
+
+        <AnimatedPinDemo />
 
         <div className="h-[1000vh] bg-transparent" />
       </div>
