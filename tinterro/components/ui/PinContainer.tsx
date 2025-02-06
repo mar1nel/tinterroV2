@@ -28,7 +28,7 @@ const PinContainer: React.FC<PinContainerProps> = ({
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 opacity-60 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-500 via-gray-300 to-gray-500 opacity-60 group-hover:opacity-100 transition-opacity" />
         <div className="relative z-10">{children}</div>
       </motion.div>
     </a>

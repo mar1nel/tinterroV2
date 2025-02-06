@@ -195,7 +195,7 @@ export default function Home() {
             </div>
           </ContainerScroll>
 
-          <h1 className="text-xl sm:text-base md:text-lg lg:text-xl max-w-5xl -mt-28 sm:-mt-36 md:-mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center px-4">
+          <h1 className="text-xl sm:text-base md:text-lg lg:text-xl max-w-5xl -mt-48 sm:-mt-36 md:-mt-44 text-zinc-800 flex flex-col items-center justify-center mx-auto text-center px-4">
             Whether it&apos;s a complex website redesign or a custom software
             project, our team excels at breaking down problems with effective
             solutions, finding the smartest paths forward, and delivering
@@ -205,7 +205,7 @@ export default function Home() {
           </h1>
 
           <GradualSpacing
-            className="relative z-10 mt-20 sm:mt-28 font-display text-center font-bold text-black
+            className="relative z-10 mt-40 sm:mt-40 font-display text-center font-bold text-black
              text-2xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl
              leading-tight"
             text="Achieve Exceptional Results"
@@ -264,7 +264,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-center text-4xl md:text-6xl font-bold flex items-center justify-center mt-20 md:mt-36 w-full">
-          More about <br /> Tinterro
+          Where are we located
         </h1>
 
         <AnimatedPinDemo />
