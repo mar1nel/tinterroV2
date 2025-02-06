@@ -30,78 +30,39 @@ export function BentoGridSecondDemo() {
 
 const Skeleton = () => <div></div>;
 
-const SkeletonThree = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
-
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
-    },
-    animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-    },
-  };
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={variants}
-      transition={{
-        duration: 10,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
-      style={{
-        background:
-          "linear-gradient(162deg, rgba(85,85,88,1) 0%, rgba(0,0,0,1) 100%)",
-        backgroundSize: "100% 100%",
-      }}
-    >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
-    </motion.div>
-  );
-};
 const SkeletonTwo = () => {
   const variants = {
     initial: {
-      x: 0,
+      x: "0",
     },
     animate: {
-      y: 65,
+      x: "100%",
       transition: {
-        duration: 1,
+        duration: 3,
+        ease: "easeInOut",
       },
     },
   };
+
   return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
-    >
+    <motion.div className="relative flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 overflow-hidden">
       <img
         src="/images/logo_black.svg"
         alt="background"
-        className="z-0 absolute inset-6 w-[40%] h-[40%] left-1/2 transform -translate-x-1/2 translate-y-[-10%]"
+        className="z-0 absolute inset-6 w-[60%] h-[60%] left-1/2 transform -translate-x-1/2 translate-y-[-10%]"
       />
+
       <motion.div
+        className="absolute inset-0 h-full bg-gradient-to-r from-transparent via-white to-transparent"
         variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-300 relative z-10 p-4  items-start space-x-2 bg-white"
-      >
-        <p className="text-xs text-neutral-500">
-          x <br /> x
-        </p>
-      </motion.div>
+        initial="initial"
+        whileHover="animate"
+        style={{ width: "170%" }}
+      />
     </motion.div>
   );
 };
+
 const SkeletonFive = () => {
   const variants = {
     initial: {
@@ -141,8 +102,6 @@ const SkeletonFive = () => {
         <img
           src="/images/vicu.jpg"
           alt="avatar"
-          height="100"
-          width="100"
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
@@ -163,10 +122,10 @@ const SkeletonFive = () => {
 
 const items = [
   {
-    title: "Web Design & UI/UX",
+    title: "Web Design & UI/UX & Prototypes",
     description:
       "Create stunning and user-friendly websites with a focus on responsive design and seamless user experience.",
-    header: <SkeletonThree />,
+    header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
@@ -195,19 +154,11 @@ const items = [
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Prototypes & MVPs",
-    description:
-      "Turn your ideas into functional prototypes or MVPs (Minimum Viable Products) to test, validate, and refine your concepts.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
     title: "E-commerce Solutions",
     description:
       "Develop and optimize online stores with secure payment gateways, inventory management, and a seamless shopping experience.",
     header: <Skeleton />,
-    className: "md:col-span-1",
+    className: "md:col-span-3",
     icon: <IconShoppingCart className="h-4 w-4 text-neutral-500" />,
   },
 ];
